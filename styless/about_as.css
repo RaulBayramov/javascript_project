@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 100%;
+    top: 0;
+}
+
+
+body {
+    background: #f7f9fa;
+    margin: 0;
+    padding: 70px 0 0 0;
+}
+
+header {
+    background: #fff;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.logo_picture {
+    max-width: 100%;
+    max-height: 60px;
+    height: auto;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li a {
+    display: inline-block;
+    color: #000;
+    padding: 5px 0;
+    margin: 0 10px;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    border-bottom-color: #4F8FC0;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+}
+
+.search-bar {
+    margin-right: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input[type="text"] {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.login {
+    max-width: 150px;
+    min-width: 100px;
+}
+
+.login_button {
+    background-color: transparent;
+    border: 1px solid #26648F;
+    box-sizing: border-box;
+    color: #00132C;
+    font-family: "Avenir Next LT W01 Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 16px 23px;
+    position: relative;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transform: scale(0.85);
+}
+
+.login_button:hover,
+.login_button:active {
+    outline: 0;
+}
+
+.login_button:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.login_button:before {
+    background-color: #D5EDF6;
+    content: "";
+    height: calc(100% + 3px);
+    position: absolute;
+    right: -7px;
+    top: -9px;
+    transition: background-color 300ms ease-in;
+    width: 100%;
+    z-index: -1;
+}
+
+.login_button:hover:before {
+    background-color: #4F8FC0;
+}
+
+@media (min-width: 768px) {
+    .login_button {
+        padding: 16px 32px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 0 10px;
+    }
+
+    .logo_picture {
+        max-height: 50px;
+    }
+
+    .search-bar {
+        width: 70%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 70px;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    header nav ul {
+        display: block;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header #nav_check:checked~nav {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    header {
+        padding: 0 10px;
+    }
+
+    .logo_picture {
+        max-height: 40px;
+    }
+
+    .search-bar {
+        width: 60%;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .hamburger {
+        display: block;
+    }
+
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        transition: 0.3s;
+    }
+
+    header #nav_check:checked~nav {
+        left: 0;
+    }
+
+    header nav ul {
+        display: block;
+    }
+
+    header nav ul li a {
+        margin: 5px 0;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.row {
+    width: 80%;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    overflow-x: hidden;
+    padding: 5rem 0;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.row .imgwrapper {
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+}
+
+.row .imgwrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.row .imgwrapper:hover img {
+    transform: scale(1.1);
+}
+
+.row .contentwrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.row .contentwrapper .content {
+    text-align: left;
+}
+
+.row .contentwrapper .content span.textwrapper {
+    font-size: 20px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.row .contentwrapper .content span.textwrapper span {
+    display: inline-block;
+    background-color: #383f47;
+    width: 70px;
+    height: 5px;
+}
+
+.row .contentwrapper .content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.row .contentwrapper .content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.row .contentwrapper .content a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #383f47;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.row .contentwrapper .content a:hover {
+    background-color: #505760;
+}
