@@ -1,3 +1,4 @@
+
 class SpecialHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -17,7 +18,7 @@ class SpecialHeader extends HTMLElement {
                 </a>
             </div>
             <div class="right-section">
-                <a class="cart-link header-link" href="checkout.html">
+                <a class="cart-link header-link" href="cart.html">
                     <img class="cart-icon" src="./images_/icons/cart-icon.png" alt="Cart Icon">
                     <div class="cart-quantity">0</div>
                     <div class="cart-text">Cart</div>

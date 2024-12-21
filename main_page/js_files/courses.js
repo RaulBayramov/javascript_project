@@ -1,5 +1,6 @@
-import { courses } from "./shares/data.js";
+import { courses } from "./data/data.js";
 import { header } from "./shares/header.js";
+import { addToCart, setQuantity, cart } from "./data/cart.js";
 let courseHTML = '';
 header();
 courses.forEach((course) => {
@@ -27,11 +28,11 @@ courses.forEach((course) => {
                     </p>
                     <div class="action-buttons">
                         <div class="added-to-cart js-added-to-card-${course.id}">
-                            <img src="./icons/checkmark.png">
+                            <img src="./images_/icons/checkmark.png">
                             Added
                         </div>
 
-                        <button class="add-to-cart-button button-primary js-add-button" data-product-id="${course.id}">
+                        <button class="add-to-cart-button button-primary js-add-button" data-id="${course.id}">
                             Add to Cart
                         </button>
                     </div>
@@ -45,9 +46,18 @@ window.addEventListener('load', () => {
     document.body.style.height = "100vh";
 });
 
-let videoPrew = document.querySelectorAll(".video-preview");
+let videoPrew = document.querySelectorAll(".thumbnail-row");
 videoPrew.forEach(element => {
     element.addEventListener("click", function () {
         window.location.href = "video_playlist.html"
     })
 });
+
+document.querySelectorAll(".js-add-button").forEach((button) => {
+    button.addEventListener("click", () => {
+        const courseId = button.dataset.id;
+        addToCart(courseId);
+        document.querySelector(".cart-quantity").innerHTML = cart.length
+    })
+})
+

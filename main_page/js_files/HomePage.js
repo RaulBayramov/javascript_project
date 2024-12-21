@@ -1,6 +1,6 @@
-import { courses } from './shares/data.js'
+import { courses } from './data/data.js'
 import * as aliasName from './shares/header.js';
-import { cart as cartDatabase } from "./cart.js";
+import { cart as cartDatabase } from "./data/cart.js";
 
 // Generate Html with javascript
 aliasName.header();
@@ -47,3 +47,4 @@ videoPrew.forEach(element => {
         window.location.href = "video_playlist.html"
     })
 });
+

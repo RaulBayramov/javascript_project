@@ -58,5 +58,10 @@ export function header() {
 
     // Pencere boyutu değiştiğinde (responsive)
     window.addEventListener('resize', updateSearchInputWidth);
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".login_button").addEventListener("click", function () {
+            window.location.href = "page_of_login.html";
+        });
+    });
 
 }
