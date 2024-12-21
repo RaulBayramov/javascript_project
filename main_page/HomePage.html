@@ -8,12 +8,12 @@
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/main_page_style.css">
-    <link rel="stylesheet" href="../styless/stylesfor_video_prew.css">
-    <link rel="stylesheet" href="../styless/stylesfor_yutubdan.css">
+    <link rel="stylesheet" href="./styles/stylesfor_video_prew.css">
+    <link rel="stylesheet" href="./styles/stylesfor_yutubdan.css">
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <div class="navbar">
             <div class="logo"><a href="#">eRBe</a></div>
             <ul class="links">
@@ -46,7 +46,8 @@
             <li><a href="contact">Contact</a></li>
             <li><button class="button-35"><a href="#" class="action_btn">Login</a></button></li>
         </div>
-    </header>
+    </header> -->
+    <special-header></special-header>
     <section class="hero">
         <h2>Welcome!</h2>
         <p>The best online courses are here.</p>
@@ -60,97 +61,8 @@
         <div class="our_populars">
             <h2 class="section-title">Our Popular Courses</h2>
         </div>
-        <section class="video-grid">
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img class="thumbnail" src="./thumbnails/data_struct_chincaze.png">
-                    <div class="video-time">23 hour</div>
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-picture">
-                        <img class="profile-picture" src="./tutors/Magda_Tsintsadze.jpg">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">
-                            The Complete Data Structures Course
-                        </p>
-                        <p class="video-author">
-                            Magda Chincadze
-                        </p>
-                        <p class="video-stats">
-                            1.7k views &#183; 6 months ago
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img class="thumbnail" src="thumbnails/Web-Programming-chinchadze.jpg">
-                    <div class="video-time">28.7 hour</div>
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-picture">
-                        <img class="profile-picture" src="tutors/Magda_Tsintsadze.jpg">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">
-                            The Complete Web Programing Course
-                        </p>
-                        <p class="video-author">
-                            Magda Chincadze
-                        </p>
-                        <p class="video-stats">
-                            19k views &#183; 4 years ago
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img class="thumbnail" src="thumbnails/maxresdefault.jpg">
-                    <div class="video-time">30 hour</div>
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-picture">
-                        <img class="profile-picture" src="tutors/vaxo_liluashvili_c038bff764.webp">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">
-                            The Complete Java course
-                        </p>
-                        <p class="video-author">
-                            Vaxtang Laluashvili
-                        </p>
-                        <p class="video-stats">
-                            6.9k views &#183; 1 year ago
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img class="thumbnail" src="thumbnails/operating-system-t.jpg">
-                    <div class="video-time">17.8 hour</div>
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-picture">
-                        <img class="profile-picture" src="tutors/OV5kTaE5Z0CW0SHf.jpg">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">
-                            The Complete Operating System Course
-                        </p>
-                        <p class="video-author">
-                            Papuna Qarchava
-                        </p>
-                        <p class="video-stats">
-                            1.1k views &#183; 1 year ago
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <section class="video-grid  js-video-grid">
+            <!-- js generation -->
         </section>
         <!-- futures section -->
         <section class="features">
@@ -229,7 +141,7 @@
             </ul>
         </aside>
 
-        <footer>
+        <!-- <footer>
             <div class="footer-content">
                 <p>&copy; 2024 Education Platform. All rights reserved.</p>
                 <ul>
@@ -238,76 +150,10 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-        </footer>
-        <script src="js_files/HomePage.js">
-
-            // const navbar = document.querySelector(".navbar");
-            // const toogleBtn = document.querySelector(".toggle_btn");
-            // const logo = document.querySelector(".logo");
-            // const searchContainer = document.querySelector(".search-container");
-            // const cart = document.querySelector(".right-section");
-            // function rearangeElements() {
-            //     const links = document.querySelector(".links");
-            //     if (window.innerWidth <= 992) {
-            //         navbar.insertBefore(searchContainer, cart);
-            //         navbar.insertBefore(toogleBtn, logo);
-            //     }
-            //     else {
-            //         navbar.insertBefore(logo, links);
-            //     }
-            // }
-            // const toogleBtnIcon = document.querySelector(".toggle_btn i");
-            // const dropDownMenu = document.querySelector(".dropdown_menu");
-            // toogleBtn.onclick = function () {
-            //     dropDownMenu.classList.toggle("open");
-            //     const isOpen = dropDownMenu.classList.contains("open");
-            //     toogleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-            // }
-            // window.addEventListener("load", rearangeElements);
-            // window.addEventListener("resize", rearangeElements);
-
-            // // search-button:
-            // const searchInput = document.querySelector('.search-input');
-            // searchInput.style.width = (window.innerWidth * 0.2) + 'px'
-            // function updateSearchInputWidth() {
-            //     if (window.innerWidth <= 576) {
-            //         searchInput.style.width = (window.innerWidth * 0.2) + 'px';
-            //     }
-            //     else {
-            //         searchInput.style.width = (window.innerWidth * 0.25) + 'px';  // Pencere genişliğinin %20'si
-            //     }
-
-            // }
-            // searchContainer.addEventListener('mouseover', () => {
-            //     if (window.innerWidth <= 992) {
-            //         logo.style.display = "none";
-            //         toogleBtn.style.marginRight = "1rem"
-            //         cart.style.marginLeft = "1rem"
-            //         searchInput.style.width = (window.innerWidth * 0.3) + 'px';  // Pencere genişliğinin %50'si
-
-            //     }
-            // })
-            // searchContainer.addEventListener('mouseout', (button) => {
-            //     if (window.innerWidth <= 992) {
-            //         logo.style.display = "block";
-            //         logo.style.marginRight = "1rem"
-            //         searchInput.style.width = (window.innerWidth * 0.2) + 'px';
-            //         updateSearchInputWidth();
-            //     }
-            // })
-            // window.addEventListener('load', updateSearchInputWidth);
-
-            // // Pencere boyutu değiştiğinde (responsive)
-            // window.addEventListener('resize', updateSearchInputWidth);
-
-            // let videoPrew = document.querySelectorAll(".video-preview");
-
-            // videoPrew.forEach(element => {
-            //     element.addEventListener("click", function () {
-            //         window.location.href = "video_playlist.html"
-            //     })
-            // });
-        </script>
+        </footer> -->
+        <special-footer></special-footer>
+        <script type="module" src="js_files/HomePage.js" defer></script>
+        <script src="./js_files/shares/headerFooterManager.js"></script>
 </body>
 
 </html>

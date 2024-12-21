@@ -18,7 +18,7 @@ class SpecialHeader extends HTMLElement {
             </div>
             <div class="right-section">
                 <a class="cart-link header-link" href="checkout.html">
-                    <img class="cart-icon" src="./icons/cart-icon.png" alt="Cart Icon">
+                    <img class="cart-icon" src="./images_/icons/cart-icon.png" alt="Cart Icon">
                     <div class="cart-quantity">0</div>
                     <div class="cart-text">Cart</div>
                 </a>

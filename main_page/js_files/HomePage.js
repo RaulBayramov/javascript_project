@@ -1,67 +1,49 @@
-const navbar = document.querySelector(".navbar");
-const toogleBtn = document.querySelector(".toggle_btn");
-const logo = document.querySelector(".logo");
-const searchContainer = document.querySelector(".search-container");
-const cart = document.querySelector(".right-section");
-function rearangeElements() {
-    const links = document.querySelector(".links");
-    if (window.innerWidth <= 992) {
-        navbar.insertBefore(searchContainer, cart);
-        navbar.insertBefore(toogleBtn, logo);
-    }
-    else {
-        navbar.insertBefore(logo, links);
-    }
-}
-const toogleBtnIcon = document.querySelector(".toggle_btn i");
-const dropDownMenu = document.querySelector(".dropdown_menu");
-toogleBtn.onclick = function () {
-    dropDownMenu.classList.toggle("open");
-    const isOpen = dropDownMenu.classList.contains("open");
-    toogleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-}
-window.addEventListener("load", rearangeElements);
-window.addEventListener("resize", rearangeElements);
+import { courses } from './shares/data.js'
+import * as aliasName from './shares/header.js';
+import { cart as cartDatabase } from "./cart.js";
 
-// search-button:
-const searchInput = document.querySelector('.search-input');
-searchInput.style.width = (window.innerWidth * 0.2) + 'px'
-function updateSearchInputWidth() {
-    if (window.innerWidth <= 576) {
-        searchInput.style.width = (window.innerWidth * 0.2) + 'px';
-    }
-    else {
-        searchInput.style.width = (window.innerWidth * 0.25) + 'px';  // Pencere genişliğinin %20'si
-    }
+// Generate Html with javascript
+aliasName.header();
+let temp = [];
+let ourPopulars;
+temp = courses.sort((a, b) => b.videoInfo.viewCount - a.videoInfo.viewCount);
+ourPopulars = temp.slice(0, 4);
+let courseHTML = '';
+ourPopulars.forEach((course) => {
+    courseHTML += `
+        <div class="video-preview ">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="${course.thumbnail}" alt="C++ Course Thumbnail">
+                <div class="video-time">${(course.videoInfo.videoLength / 3600).toFixed(1)} hours</div>
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="${course.instructor.img}" alt="Not Found">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">
+                        ${course.name}
+                    </p>
+                    <p class="video-author">
+                        <a href="${course.instructor.aboutInstructor}" target="_blank" rel="noopener noreferrer">
+                            ${course.instructor.name}
 
-}
-searchContainer.addEventListener('mouseover', () => {
-    if (window.innerWidth <= 992) {
-        logo.style.display = "none";
-        toogleBtn.style.marginRight = "1rem"
-        cart.style.marginLeft = "1rem"
-        searchInput.style.width = (window.innerWidth * 0.3) + 'px';  // Pencere genişliğinin %50'si
-
-    }
+                        </a>
+                    </p>
+                    <p class="video-stats">
+                        ${course.videoInfo.viewCount} views &#183; ${course.videoInfo.loadedTime}
+                    </p>
+                </div>
+            </div>
+        </div>
+    `;
 })
-searchContainer.addEventListener('mouseout', (button) => {
-    if (window.innerWidth <= 992) {
-        logo.style.display = "block";
-        logo.style.marginRight = "1rem"
-        searchInput.style.width = (window.innerWidth * 0.2) + 'px';
-        updateSearchInputWidth();
-    }
-})
-window.addEventListener('load', updateSearchInputWidth);
-
-// Pencere boyutu değiştiğinde (responsive)
-window.addEventListener('resize', updateSearchInputWidth);
+document.querySelector('.js-video-grid').innerHTML = courseHTML;
 
 let videoPrew = document.querySelectorAll(".video-preview");
-
+//ad link to the playlist for each course
 videoPrew.forEach(element => {
     element.addEventListener("click", function () {
         window.location.href = "video_playlist.html"
     })
 });
-
