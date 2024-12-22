@@ -1,8 +1,10 @@
 
-export let cart = [
-    { courseId: "1234567890" },
-    { courseId: "1234567892" }
-]
+export let cart = JSON.parse(localStorage.getItem('cart'));
+if (!cart) {
+    cart = [
+        { courseId: "1234567890" }
+    ]
+}
 function addedMesageFunc(courseId) {
     const addedMesage = document.querySelector(`.js-added-to-card-${courseId}`);
     addedMesage.style.opacity = 1;
@@ -24,6 +26,7 @@ export function addToCart(courseId) {
         });
     }
     console.log(cart);
+    saveToStorage();
 }
 export function removeFromCart(courseId) {
     const newCart = [];
@@ -33,4 +36,9 @@ export function removeFromCart(courseId) {
         }
     })
     cart = newCart;
+    saveToStorage();
+}
+
+export function saveToStorage() {
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
