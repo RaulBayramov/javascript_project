@@ -11,6 +11,14 @@ body {
     background-color: #eee;
 }
 
+html,
+body {
+    min-height: 100vh;
+    /* Sayfa yüksekliğini en az görünüm yüksekliğine ayarlar */
+    display: flex;
+    flex-direction: column;
+}
+
 .heading {
     color: #444;
     font-size: 40px;

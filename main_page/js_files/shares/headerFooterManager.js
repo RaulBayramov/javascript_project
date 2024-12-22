@@ -6,8 +6,8 @@ class SpecialHeader extends HTMLElement {
         <div class="navbar">
             <div class="logo"><a href="./HomePage.html">eRBe</a></div>
             <ul class="links">
-                <li><a href="hero">Home</a></li>
-                <li><a href="about">About</a></li>
+                <li><a href="./HomePage.html">Home</a></li>
+                <li><a href="about_as.html">About</a></li>
                 <li><a href="services">Services</a></li>
                 <li><a href="contact">Contact</a></li>
             </ul>
@@ -28,8 +28,8 @@ class SpecialHeader extends HTMLElement {
             <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
         </div>
         <div class="dropdown_menu">
-            <li><a href="hero">Home</a></li>
-            <li><a href="about">About</a></li>
+            <li><a href="./HomePage.html">Home</a></li>
+            <li><a href="about_as.html">About</a></li>
             <li><a href="services">Services</a></li>
             <li><a href="contact">Contact</a></li>
             <li><button class="button-35"><a href="#" class="action_btn">Login</a></button></li>
