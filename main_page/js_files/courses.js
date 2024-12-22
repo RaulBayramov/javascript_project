@@ -1,6 +1,6 @@
 import { courses } from "./data/data.js";
 import { header } from "./shares/header.js";
-import { addToCart, setQuantity, cart } from "./data/cart.js";
+import { addToCart, cart } from "./data/cart.js";
 let courseHTML = '';
 header();
 courses.forEach((course) => {

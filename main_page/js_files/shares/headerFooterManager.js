@@ -1,4 +1,4 @@
-
+import { cart } from "../data/cart.js";
 class SpecialHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -20,7 +20,7 @@ class SpecialHeader extends HTMLElement {
             <div class="right-section">
                 <a class="cart-link header-link" href="cart.html">
                     <img class="cart-icon" src="./images_/icons/cart-icon.png" alt="Cart Icon">
-                    <div class="cart-quantity">0</div>
+                    <div class="cart-quantity">${cart.length}</div>
                     <div class="cart-text">Cart</div>
                 </a>
                 <button class="login_button" role="button">Login</button>

@@ -1,5 +1,8 @@
-import { header } from "../shares/header.js"
-export let cart = []
+
+export let cart = [
+    { courseId: "1234567890" },
+    { courseId: "1234567892" }
+]
 function addedMesageFunc(courseId) {
     const addedMesage = document.querySelector(`.js-added-to-card-${courseId}`);
     addedMesage.style.opacity = 1;
@@ -22,6 +25,12 @@ export function addToCart(courseId) {
     }
     console.log(cart);
 }
-export function setQuantity() {
-    return cart.length;
+export function removeFromCart(courseId) {
+    const newCart = [];
+    cart.forEach((course) => {
+        if (course.courseId !== courseId) {
+            newCart.push(course);
+        }
+    })
+    cart = newCart;
 }
