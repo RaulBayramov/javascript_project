@@ -9,7 +9,7 @@ class SpecialHeader extends HTMLElement {
                 <li><a href="./HomePage.html">Home</a></li>
                 <li><a href="about_as.html">About</a></li>
                 <li><a href="services">Services</a></li>
-                <li><a href="contact">Contact</a></li>
+                <li><a href="contactForm.html">Contact</a></li>
             </ul>
             <div class="search-container">
                 <input type="text" class="search-input" placeholder="Search...">
@@ -31,8 +31,8 @@ class SpecialHeader extends HTMLElement {
             <li><a href="./HomePage.html">Home</a></li>
             <li><a href="about_as.html">About</a></li>
             <li><a href="services">Services</a></li>
-            <li><a href="contact">Contact</a></li>
-            <li><button class="button-35"><a href="#" class="action_btn">Login</a></button></li>
+            <li><a href="contactForm.html">Contact</a></li>
+            <li><button class="button-35"><a href="page_of_login.html" class="action_btn">Login</a></button></li>
         </div>
     </header>
 `;

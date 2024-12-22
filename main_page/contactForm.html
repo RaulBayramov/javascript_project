@@ -4,45 +4,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styless/style.css" />
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="icons/Screenshot 2024-05-23 220758.png" type="png">
+    <link rel="stylesheet" href="styles/main_page_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/stylesfor_yutubdan.css">
+    <link rel="stylesheet" href="styles/contactForm.css">
     <title>Tork/demo.ge/ContactForm</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="left">
-            <img class="logo_picture" src="icons/Screenshot 2024-05-23 220758.png" alt="Eğitim Platformu">
-        </div>
-        <div class="section2">
-            <input type="checkbox" id="nav_check" hidden>
-            <nav>
-                <ul>
-                    <li><a href="main_page.html">Home</a></li>
-                    <li><a href="about_as.html">About</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="index.html">Contact</a></li>
-
-                </ul>
-            </nav>
-            <label for="nav_check" class="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </label>
-        </div>
-        <div class="right-section">
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-            </div>
-            <div class="login">
-                <button class="login_button" onclick="window.location.href='page_of_login.html';">Login</button>
-            </div>
-
-        </div>
-
-    </header>
+    <special-header></special-header>
     <div class="container">
         <span class="big-circle"></span>
         <img src="img/shape.png" class="square" alt="" />
@@ -118,8 +91,10 @@
             </div>
         </div>
     </div>
-
+    <special-footer></special-footer>
     <script src="app.js"></script>
+    <script type="module" src="../main_page/js_files/shares/headerFooterManager.js"></script>
+    <script type="module" src="../main_page/js_files/contactForm.js"></script>
 </body>
 
 </html>

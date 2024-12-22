@@ -4,21 +4,19 @@
     box-sizing: border-box;
 }
 
+html,
 body {
     background-color: #fff;
     background-size: cover;
     background-position: center;
     margin: 0;
-}
-
-html,
-body {
     height: 100%;
     /* Sayfa yüksekliğini ekranın tamamına ayarlar */
     margin: 0;
     /* Varsayılan dış boşlukları sıfırlar */
     padding: 0;
     /* Varsayılan iç boşlukları sıfırlar */
+    font-family: 'Roboto', sans-serif;
 }
 
 li {
