@@ -1,14 +1,14 @@
 class Cart {
     cartItems;
-    localStorageName;
+    #localStorageName; //# means private
     constructor(localStorageName) {
         // has to be named constructor
         // shoul not return anything
-        this.localStorageName = localStorageName;
+        this.#localStorageName = localStorageName;
         this.loadFromStorage();
     }
     loadFromStorage() {
-        this.cartItems = JSON.parse(localStorage.getItem(this.localStorageName))
+        this.cartItems = JSON.parse(localStorage.getItem(this.#localStorageName))
         if (!this.cartItems) {
             this.cartItems = [
                 { courseId: "1234567890" }
@@ -48,7 +48,7 @@ class Cart {
         this.saveToStorage();
     }
     saveToStorage() {
-        localStorage.setItem(this.localStorageName, JSON.stringify(this.cartItems));
+        localStorage.setItem(this.#localStorageName, JSON.stringify(this.cartItems));
     }
 }
 
