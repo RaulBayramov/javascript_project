@@ -1,3 +1,24 @@
+class Course {
+    name;
+    id;
+    instructor;
+    videoSrc;
+    thumbnail;
+    videoInfo;
+    constructor(course) {
+        this.name = course.name;
+        this.id = course.id;
+        this.instructor = course.instructor;
+        this.videoSrc = course.videoSrc;
+        this.thumbnail = course.thumbnail;
+        this.videoInfo = course.videoInfo;
+    }
+    getVideoLength() {
+        return ` ${(this.videoInfo.videoLength / 3600).toFixed(1)}`
+    }
+
+}
+
 export let courses = [
     {
         name: "The Complete Python Programming Course",
@@ -80,6 +101,8 @@ export let courses = [
         }
     }
 
-]
-
+].map((course) => {
+    return new Course(course);
+})
+console.log(courses);
 

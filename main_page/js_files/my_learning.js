@@ -13,7 +13,7 @@ function renderCart() {
         <div class="video-preview js-video-preview-${matchCourse.id}">
             <div class="thumbnail-row">
                 <img class="thumbnail" src="${matchCourse.thumbnail}" alt="C++ Course Thumbnail">
-                <div class="video-time">${(matchCourse.videoInfo.videoLength / 3600).toFixed(1)} hours</div>
+                <div class="video-time">${matchCourse.getVideoLength()} hours</div>
             </div>
             <div class="video-info-grid">
                 <div class="channel-picture">

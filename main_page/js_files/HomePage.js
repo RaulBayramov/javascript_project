@@ -14,7 +14,7 @@ ourPopulars.forEach((course) => {
         <div class="video-preview">
             <div class="thumbnail-row">
                 <img class="thumbnail" src="${course.thumbnail}" alt="C++ Course Thumbnail">
-                <div class="video-time">${(course.videoInfo.videoLength / 3600).toFixed(1)} hours</div>
+                <div class="video-time">${course.getVideoLength()} hours</div>
             </div>
             <div class="video-info-grid">
                 <div class="channel-picture">
