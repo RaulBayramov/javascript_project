@@ -60,7 +60,6 @@ document.querySelectorAll(".js-add-button").forEach((button) => {
     button.addEventListener("click", () => {
         const courseId = button.dataset.id;
         addToCart(courseId);
-        console.log(courseId)
         document.querySelector(".cart-quantity").innerHTML = cartDatabase.length;
     })
 })
