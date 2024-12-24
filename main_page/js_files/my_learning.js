@@ -2,6 +2,7 @@ import { header } from "./shares/header.js";
 import { cart, removeFromCart } from "./data/cart.js";
 import { courses } from "./data/data.js";
 import "./data/cart_oop.js";
+import "./data/cart-class.js";
 header();
 function renderCart() {
     let cartSummary = '';
